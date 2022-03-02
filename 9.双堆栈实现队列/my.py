@@ -12,10 +12,14 @@ class Queue(object):
         else:
             nums = len(self.A)
             if nums>0:
-                for item in self.A:
-                    self.B.append(item)
-                    return self.B.pop(0)
+                while self.A:
+                    self.B.append(self.A.pop(0))
+
+                return self.B.pop(0)
             else:
                 return -1
+
+if __name__=="__main__":
+    pass
 
 
